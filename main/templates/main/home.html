@@ -1,0 +1,28 @@
+
+{% extends "main/header.html" %}
+
+{% block content %}
+<div class="row">
+	  	{% for rev in reviews %}
+    <div class="col s12 m8 l6">
+      <div class="card blue-grey lighten-1">
+        <div class="card-content white-text">
+
+          <span class="card-title"><b>{{rev.review_title}}   <span class="right">Genre: {{rev.review_genre}}</span></b></span>
+          	<p  style="font-size: 66%"> {{rev.review_published}} </p>
+          	<br></br>
+          	<p> {{rev.review_content|safe}} </p>
+        </div>
+        <div class="card-action">
+          <a href="#"> Watch Trailer</a>
+          
+        </div>
+      </div>
+    </div>
+	{% endfor %}
+
+</div>
+            	
+</body>
+
+{% endblock %}
